@@ -12,21 +12,28 @@ public class Player : MonoBehaviour
 
     BallMotor _ballMotor;
 
+
+    // caching
     private void Awake()
     {
         _ballMotor = GetComponent<BallMotor>();
     }
 
+
+    // sets default treasure value
     private void Start()
     {
         _currentTreasure = 0;
     }
 
+
     private void FixedUpdate()
     {
-        ProcessMovement();  
+        ProcessMovement();
     }
 
+
+    // input associated with player movement
     private void ProcessMovement()
     {
         //TODO move into Input script
@@ -38,6 +45,8 @@ public class Player : MonoBehaviour
         _ballMotor.Move(movement);
     }
 
+
+    // iterates treasure value and sends event
     public void CollectTreasure(int amount)
     {
         _currentTreasure += amount;
