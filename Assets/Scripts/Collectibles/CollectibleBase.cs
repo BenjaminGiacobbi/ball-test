@@ -42,10 +42,10 @@ public abstract class CollectibleBase : MonoBehaviour
         Player player = other.gameObject.GetComponent<Player>();
         if(player != null)
         {
+            // feedback plays first to pass the particle reference to collect
+            Feedback();
             Collect(player);
 
-            // particles and sfx, then disable
-            Feedback();
             gameObject.SetActive(false);
         }
     }
@@ -57,7 +57,7 @@ public abstract class CollectibleBase : MonoBehaviour
         if (_collectParticles != null)
         {
             _collectParticles = Instantiate
-                (_collectParticles, transform.position, Quaternion.identity);
+                (_collectParticles, transform.position, Quaternion.Euler(new Vector3(-45, 0, 0)));
         }
 
         // audio

@@ -206,6 +206,22 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8518748406055147886}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &260187817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 260187809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24998bb589730d34e96cdebcfa495f03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _maxHealth: 3
+  _damageMaterial: {fileID: 2100000, guid: 62248ed0116918546916f5d13d8269d5, type: 2}
+  _damageSound: {fileID: 8300000, guid: c6bb3fc8039d2aa4da98e425cc4938c3, type: 3}
+  _deathSound: {fileID: 8300000, guid: 85733baee9bffed4db86f338f6dfc1e4, type: 3}
 --- !u!1 &362301813
 GameObject:
   m_ObjectHideFlags: 0
@@ -821,6 +837,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: HealthIncrease
       objectReference: {fileID: 0}
+    - target: {fileID: 220984055341955973, guid: c2d56ab80f2e2f246b0c2c9215b10846,
+        type: 3}
+      propertyPath: _collectSound
+      value: 
+      objectReference: {fileID: 8300000, guid: ef3b8dfd19d78ce4a8e88b900e6b6ee5, type: 3}
+    - target: {fileID: 220984055341955973, guid: c2d56ab80f2e2f246b0c2c9215b10846,
+        type: 3}
+      propertyPath: _collectParticles
+      value: 
+      objectReference: {fileID: 988711206665754034, guid: f9ce0d79cce53cd4dbbb11689c242774,
+        type: 3}
     - target: {fileID: 220984055341955978, guid: c2d56ab80f2e2f246b0c2c9215b10846,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -890,6 +917,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BouncerBall
       objectReference: {fileID: 0}
+    - target: {fileID: 2230039553335942329, guid: d71ed189ae7a86d4da7d95b4caa76c9c,
+        type: 3}
+      propertyPath: _impactSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 7b8cb15eb7bb677418403c41ab68706e, type: 3}
     - target: {fileID: 2230039553335942334, guid: d71ed189ae7a86d4da7d95b4caa76c9c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -954,6 +986,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2374858919648338088, guid: 4555dbee37ac6d54789048619632c1c9,
+        type: 3}
+      propertyPath: _powerUpDuration
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 2374858919648338091, guid: 4555dbee37ac6d54789048619632c1c9,
         type: 3}
       propertyPath: m_Name
@@ -1078,6 +1115,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2584491788643047126, guid: 0dcc8e09191021d47a40fd0f291c8f65,
+        type: 3}
+      propertyPath: _collectParticles
+      value: 
+      objectReference: {fileID: 8761694974513180007, guid: 07bd53016b0b56b48beb575147e47d30,
+        type: 3}
+    - target: {fileID: 2584491788643047126, guid: 0dcc8e09191021d47a40fd0f291c8f65,
+        type: 3}
+      propertyPath: _collectSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 0971c3af1e82f6f4eb74c76b6c4a7a1a, type: 3}
     - target: {fileID: 2584491788643047127, guid: 0dcc8e09191021d47a40fd0f291c8f65,
         type: 3}
       propertyPath: m_Name
@@ -1221,6 +1269,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1163955662170345580, guid: 08bd57f6436d9d54da049ed3125b0870,
+        type: 3}
+      propertyPath: _collectSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 4956bd8da42d77e439f18cb98ca28c9b, type: 3}
     - target: {fileID: 1163955662170345581, guid: 08bd57f6436d9d54da049ed3125b0870,
         type: 3}
       propertyPath: m_Name
@@ -1235,6 +1288,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8518748406264741830, guid: 9768fe8eeaf9f7d47be0db7aa3bc5ac1,
+        type: 3}
+      propertyPath: _damageMaterial
+      value: 
+      objectReference: {fileID: 2100000, guid: 8f60bbfdbdd0608409f1bd736a783e7c, type: 2}
+    - target: {fileID: 8518748406264741830, guid: 9768fe8eeaf9f7d47be0db7aa3bc5ac1,
+        type: 3}
+      propertyPath: _damageSound
+      value: 
+      objectReference: {fileID: 8300000, guid: c6bb3fc8039d2aa4da98e425cc4938c3, type: 3}
     - target: {fileID: 8518748406264741835, guid: 9768fe8eeaf9f7d47be0db7aa3bc5ac1,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1309,6 +1372,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: KillerBall
       objectReference: {fileID: 0}
+    - target: {fileID: 9214402147716148591, guid: 9e1428046f2423a49a8dad7301e08f50,
+        type: 3}
+      propertyPath: _impactSound
+      value: 
+      objectReference: {fileID: 8300000, guid: bf81ebfdba583ea4bbfbf58cff25fa11, type: 3}
     - target: {fileID: 9214402147716148596, guid: 9e1428046f2423a49a8dad7301e08f50,
         type: 3}
       propertyPath: m_LocalPosition.x

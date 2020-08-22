@@ -10,7 +10,7 @@ public class Invincibility : PowerUpBase
     protected override void PowerUp(Player player)
     {
         // sets invincible and changes player visual
-        player.SetInvincible(true);
+        player.GetComponent<Health>()?.SetInvincible(true);
         MeshRenderer playerRenderer = player.GetComponent<MeshRenderer>();
 
         // stores current material to reassign later
@@ -20,7 +20,7 @@ public class Invincibility : PowerUpBase
 
     protected override void PowerDown(Player player)
     {
-        player.SetInvincible(false);
+        player.GetComponent<Health>()?.SetInvincible(false);
 
         // resets original material and nullifies temp material
         MeshRenderer playerRenderer = player.GetComponent<MeshRenderer>();

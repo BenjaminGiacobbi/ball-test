@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class Killer : Enemy
 {
+
     protected override void PlayerImpact(Player player)
     {
-        // base.PlayerImpact(player);
-        player.Kill();
+        Health playerHealth = player.GetComponent<Health>();
+        playerHealth.Kill();
     }
 }

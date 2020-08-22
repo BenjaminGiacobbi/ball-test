@@ -4,17 +4,11 @@ using UnityEngine;
 using System;
 
 [RequireComponent(typeof(BallMotor))]
+[RequireComponent(typeof(Health))]
 public class Player : MonoBehaviour
 {
     public event Action<int> TreasureCollected = delegate { };
-
-    // TODO offload into a generic health function
-    [SerializeField] int _maxHealth = 3;
-    private int _currentHealth;
-    private int _currentTreasure;
-    private bool _invincible = false;
-
-
+    private int _currentTreasure = 0;
 
     BallMotor _ballMotor;
 
@@ -25,7 +19,6 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        _currentHealth = _maxHealth;
         _currentTreasure = 0;
     }
 
@@ -43,40 +36,6 @@ public class Player : MonoBehaviour
         Vector3 movement = new Vector3(moveHorizontal, 0, moveVertical).normalized;
 
         _ballMotor.Move(movement);
-    }
-
-    public void SetInvincible(bool invicibleState)
-    {
-        _invincible = invicibleState;
-    }
-
-    public void IncreaseHealth(int amount)
-    {
-        _currentHealth += amount;
-        _currentHealth = Mathf.Clamp(_currentHealth, 0, _maxHealth);
-        Debug.Log("Player's Health: " + _currentHealth);
-
-    }
-
-    public void DecreaseHealth(int amount)
-    {
-        if(!_invincible)
-        {
-            _currentHealth -= amount;
-            Debug.Log("Player's Health: " + _currentHealth);
-            if (_currentHealth < 0)
-                Kill();
-        } 
-    }
-
-    public void Kill()
-    {
-        if (!_invincible)
-        {
-            gameObject.SetActive(false);
-            // particles
-            // sound
-        }
     }
 
     public void CollectTreasure(int amount)

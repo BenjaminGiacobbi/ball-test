@@ -56,6 +56,7 @@ public abstract class PowerUpBase : MonoBehaviour
             {
                 _powerUpDuration = 0;
                 PowerDown(playerReference);
+                playerReference = null;
             }
         }
     }

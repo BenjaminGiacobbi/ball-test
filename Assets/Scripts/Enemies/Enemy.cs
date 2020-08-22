@@ -34,7 +34,8 @@ public class Enemy : MonoBehaviour
 
     protected virtual void PlayerImpact(Player player)
     {
-        player.DecreaseHealth(_damageAmount);
+        Health playerHealth = player.GetComponent<Health>();
+        playerHealth.DecreaseHealth(_damageAmount);
     }
 
     private void ImpactFeedback()
